@@ -1,6 +1,7 @@
-const heading= React.createElement("h1",{},"Namaste React from Javascript");
+const heading= React.createElement("h1",{id: "heading"},"Namaste React from Javascript");
 const root=ReactDOM.createRoot(document.getElementById("root"));
 root.render(heading);
+console.log(heading);
 
 const topic=React.createElement("p",{},"This is a paragraph");
 const root2=ReactDOM.createRoot(document.getElementById("root2"));
