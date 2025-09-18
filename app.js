@@ -24,3 +24,15 @@ const parent=React.createElement("div",{id: "parent"},[React.createElement("div"
 
 const root4=ReactDOM.createRoot(document.getElementById("root"));
 root4.render(parent);
+
+// <div id="parent">
+// <div id="child">
+// <h1>I'm h1 Tag </h1>
+// <h2>I'm h2 Tag </h2>
+// </div>
+// </div>
+// COnverting to react code 
+
+const parent2=React.createElement("div",{id: "parent"},[React.createElement("div",{id: "child"},[React.createElement("h1",{},"I'm h1 Tag"),React.createElement("h2",{},"I'm h2 Tag")]),React.createElement("div",{id: "child"},[React.createElement("h1",{},"I'm h1 Tag"),React.createElement("h2",{},"I'm h2 Tag")])]);
+const root5=ReactDOM.createRoot(document.getElementById("root5"));
+root5.render(parent2);
