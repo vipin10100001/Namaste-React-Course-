@@ -1,0 +1,14 @@
+#heading {
+  color: red;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px #00000080;
+  background-color: #000;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=Namaste-React-Course-.9e4c6fd2.css.map */
