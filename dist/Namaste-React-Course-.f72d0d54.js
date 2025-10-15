@@ -725,75 +725,68 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
-// --- Single heading ---
-const heading = /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-    id: "heading",
-    abc: "xyz"
-}, "Namaste React from JavaScript");
+const heading = /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {}, "Namaste React from JavaScript");
 const root = (0, _client.createRoot)(document.getElementById("root"));
-root.render(heading);
-// --- Paragraph example ---
-const topic = /*#__PURE__*/ (0, _reactDefault.default).createElement("p", {}, "This is a paragraph");
-const root2 = (0, _client.createRoot)(document.getElementById("root2"));
-root2.render(topic);
-// --- Paragraph with ID ---
-const p2 = /*#__PURE__*/ (0, _reactDefault.default).createElement("p", {
-    id: "para"
-}, "This is a paragraph with id");
-const root3 = (0, _client.createRoot)(document.getElementById("root3"));
-root3.render(p2);
-// --- Nested div structure (Example 1) ---
-const parent = /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-    id: "parent"
-}, [
-    /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-        id: "child",
-        key: "child1"
-    }, [
-        /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-            key: "h1-1"
-        }, "I'm h1 Tag")
-    ]),
-    /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-        id: "child",
-        key: "child2"
-    }, [
-        /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-            key: "h1-2"
-        }, "I'm h1 Tag")
-    ])
-]);
-const root4 = (0, _client.createRoot)(document.getElementById("root4"));
-root4.render(parent);
-// --- Nested div structure (Example 2) ---
-const parent2 = /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-    id: "parent"
-}, [
-    /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-        id: "child",
-        key: "child1"
-    }, [
-        /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-            key: "h1-1"
-        }, "I'm h1x Tag"),
-        /*#__PURE__*/ (0, _reactDefault.default).createElement("h2", {
-            key: "h2-1"
-        }, "I'm h2 Tag")
-    ]),
-    /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-        id: "child",
-        key: "child2"
-    }, [
-        /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-            key: "h1-2"
-        }, "I'm h1 Tag"),
-        /*#__PURE__*/ (0, _reactDefault.default).createElement("h2", {
-            key: "h2-2"
-        }, "I'm h2 Tag")
-    ])
-]);
-const root5 = (0, _client.createRoot)(document.getElementById("root5"));
-root5.render(parent2);
+root.render(heading); // // --- Single heading ---
+ // const heading = React.createElement(
+ //   "h1",
+ //   { id: "heading", abc: "xyz" },
+ //   "Namaste React from JavaScript"
+ // );
+ // const root = createRoot(document.getElementById("root"));
+ // root.render(heading);
+ // // --- Paragraph example ---
+ // const topic = React.createElement("p", {}, "This is a paragraph");
+ // const root2 = createRoot(document.getElementById("root2"));
+ // root2.render(topic);
+ // // --- Paragraph with ID ---
+ // const p2 = React.createElement("p", { id: "para" }, "This is a paragraph with id");
+ // const root3 = createRoot(document.getElementById("root3"));
+ // root3.render(p2);
+ // // --- Nested div structure (Example 1) ---
+ // const parent = React.createElement(
+ //   "div",
+ //   { id: "parent" },
+ //   [
+ //     React.createElement(
+ //       "div",
+ //       { id: "child", key: "child1" },
+ //       [React.createElement("h1", { key: "h1-1" }, "I'm h1 Tag")]
+ //     ),
+ //     React.createElement(
+ //       "div",
+ //       { id: "child", key: "child2" },
+ //       [React.createElement("h1", { key: "h1-2" }, "I'm h1 Tag")]
+ //     ),
+ //   ]
+ // );
+ // const root4 = createRoot(document.getElementById("root4"));
+ // root4.render(parent);
+ // // --- Nested div structure (Example 2) ---
+ // const parent2 = React.createElement(
+ //   "div",
+ //   { id: "parent" },
+ //   [
+ //     React.createElement(
+ //       "div",
+ //       { id: "child", key: "child1" },
+ //       [
+ //         React.createElement("h1", { key: "h1-1" }, "I'm h1x Tag"),
+ //         React.createElement("h2", { key: "h2-1" }, "I'm h2 Tag"),
+ //       ]
+ //     ),
+ //     React.createElement(
+ //       "div",
+ //       { id: "child", key: "child2" },
+ //       [
+ //         React.createElement("h1", { key: "h1-2" }, "I'm h1 Tag"),
+ //         React.createElement("h2", { key: "h2-2" }, "I'm h2 Tag"),
+ //       ]
+ //     ),
+ //   ]
+ // );
+ // const root5 = createRoot(document.getElementById("root5"));
+ // root5.render(parent2);
 
   $parcel$ReactRefreshHelpers$5fe5.postlude(module);
 } finally {

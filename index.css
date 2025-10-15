@@ -1,4 +1,4 @@
-#heading{
+h1{
     color: red;
     background-color: black;
     padding: 10px;
@@ -11,3 +11,4 @@
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
