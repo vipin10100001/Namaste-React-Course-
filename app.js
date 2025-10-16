@@ -2,10 +2,19 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 
 
-const heading = React.createElement("h1", {}, "Namaste React from JavaScript");
-const root = createRoot(document.getElementById("root"));
-root.render(heading);
+// const heading = React.createElement(
+//     "h1", 
+//     {id:"abc"}, 
+//     "Namaste React from JavaScript"
+//     );
 
+// const root = createRoot(document.getElementById("root"));
+// root.render(heading);
+
+
+const jsxHeading = <h2>Namaste React from JSX</h2>;
+const root = createRoot(document.getElementById("root"));
+root.render(jsxHeading);
 // // --- Single heading ---
 // const heading = React.createElement(
 //   "h1",
