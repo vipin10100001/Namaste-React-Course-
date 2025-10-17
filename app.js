@@ -12,11 +12,11 @@ import { createRoot } from "react-dom/client";
 // root.render(heading);
 
 
-const jsxHeading = (
+const heading = (
     <h2 className="heading">Namaste React from JSX</h2>);
-
+ 
 const root = createRoot(document.getElementById("root"));
-root.render(jsxHeading);
+root.render(heading);
 // // --- Single heading ---
 // const heading = React.createElement(
 //   "h1",

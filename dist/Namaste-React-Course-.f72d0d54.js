@@ -733,7 +733,7 @@ var _client = require("react-dom/client");
 //     );
 // const root = createRoot(document.getElementById("root"));
 // root.render(heading);
-const jsxHeading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+const heading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
     className: "heading",
     children: "Namaste React from JSX"
 }, void 0, false, {
@@ -742,7 +742,7 @@ const jsxHeading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
     columnNumber: 5
 }, undefined);
 const root = (0, _client.createRoot)(document.getElementById("root"));
-root.render(jsxHeading); // // --- Single heading ---
+root.render(heading); // // --- Single heading ---
  // const heading = React.createElement(
  //   "h1",
  //   { id: "heading", abc: "xyz" },
