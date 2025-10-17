@@ -12,7 +12,9 @@ import { createRoot } from "react-dom/client";
 // root.render(heading);
 
 
-const jsxHeading = <h2>Namaste React from JSX</h2>;
+const jsxHeading = (
+    <h2 className="heading">Namaste React from JSX</h2>);
+
 const root = createRoot(document.getElementById("root"));
 root.render(jsxHeading);
 // // --- Single heading ---

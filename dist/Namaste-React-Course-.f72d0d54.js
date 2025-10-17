@@ -734,11 +734,12 @@ var _client = require("react-dom/client");
 // const root = createRoot(document.getElementById("root"));
 // root.render(heading);
 const jsxHeading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+    className: "heading",
     children: "Namaste React from JSX"
 }, void 0, false, {
     fileName: "app.js",
-    lineNumber: 15,
-    columnNumber: 20
+    lineNumber: 16,
+    columnNumber: 5
 }, undefined);
 const root = (0, _client.createRoot)(document.getElementById("root"));
 root.render(jsxHeading); // // --- Single heading ---
