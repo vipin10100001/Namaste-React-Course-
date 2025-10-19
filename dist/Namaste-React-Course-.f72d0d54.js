@@ -721,11 +721,6 @@ var prevRefreshSig = globalThis.$RefreshSig$;
 $parcel$ReactRefreshHelpers$5fe5.prelude(module);
 
 try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _client = require("react-dom/client");
 // const heading = React.createElement(
 //     "h1", 
 //     {id:"abc"}, 
@@ -733,75 +728,125 @@ var _client = require("react-dom/client");
 //     );
 // const root = createRoot(document.getElementById("root"));
 // root.render(heading);
+// // --- Single heading ---
+// const heading = React.createElement(
+//   "h1",
+//   { id: "heading", abc: "xyz" },
+//   "Namaste React from JavaScript"
+// );
+// const root = createRoot(document.getElementById("root"));
+// root.render(heading);
+// // --- Paragraph example ---
+// const topic = React.createElement("p", {}, "This is a paragraph");
+// const root2 = createRoot(document.getElementById("root2"));
+// root2.render(topic);
+// // --- Paragraph with ID ---
+// const p2 = React.createElement("p", { id: "para" }, "This is a paragraph with id");
+// const root3 = createRoot(document.getElementById("root3"));
+// root3.render(p2);
+// // --- Nested div structure (Example 1) ---
+// const parent = React.createElement(
+//   "div",
+//   { id: "parent" },
+//   [
+//     React.createElement(
+//       "div",
+//       { id: "child", key: "child1" },
+//       [React.createElement("h1", { key: "h1-1" }, "I'm h1 Tag")]
+//     ),
+//     React.createElement(
+//       "div",
+//       { id: "child", key: "child2" },
+//       [React.createElement("h1", { key: "h1-2" }, "I'm h1 Tag")]
+//     ),
+//   ]
+// );
+// const root4 = createRoot(document.getElementById("root4"));
+// root4.render(parent);
+// // --- Nested div structure (Example 2) ---
+// const parent2 = React.createElement(
+//   "div",
+//   { id: "parent" },
+//   [
+//     React.createElement(
+//       "div",
+//       { id: "child", key: "child1" },
+//       [
+//         React.createElement("h1", { key: "h1-1" }, "I'm h1x Tag"),
+//         React.createElement("h2", { key: "h2-1" }, "I'm h2 Tag"),
+//       ]
+//     ),
+//     React.createElement(
+//       "div",
+//       { id: "child", key: "child2" },
+//       [
+//         React.createElement("h1", { key: "h1-2" }, "I'm h1 Tag"),
+//         React.createElement("h2", { key: "h2-2" }, "I'm h2 Tag"),
+//       ]
+//     ),
+//   ]
+// );
+// const root5 = createRoot(document.getElementById("root5"));
+// root5.render(parent2);
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _client = require("react-dom/client");
+// ✅ Simple JSX element example (optional)
 const heading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
     className: "heading",
-    children: "Namaste React from JSX"
+    children: "Namaste React from JSX directly"
 }, void 0, false, {
     fileName: "app.js",
-    lineNumber: 16,
-    columnNumber: 5
+    lineNumber: 88,
+    columnNumber: 3
 }, undefined);
+// ✅ Title Component
+const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+        className: "title",
+        children: "This is a Title"
+    }, void 0, false, {
+        fileName: "app.js",
+        lineNumber: 95,
+        columnNumber: 3
+    }, undefined);
+_c = Title;
+// ✅ Heading Component (uses Title component inside)
+const Heading = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "heading-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "heading",
+                children: "Namaste React from JSX via React Functional Component"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 101,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 104,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "app.js",
+        lineNumber: 100,
+        columnNumber: 3
+    }, undefined);
+_c1 = Heading;
+// ✅ Create React root
 const root = (0, _client.createRoot)(document.getElementById("root"));
-root.render(heading); // // --- Single heading ---
- // const heading = React.createElement(
- //   "h1",
- //   { id: "heading", abc: "xyz" },
- //   "Namaste React from JavaScript"
- // );
- // const root = createRoot(document.getElementById("root"));
- // root.render(heading);
- // // --- Paragraph example ---
- // const topic = React.createElement("p", {}, "This is a paragraph");
- // const root2 = createRoot(document.getElementById("root2"));
- // root2.render(topic);
- // // --- Paragraph with ID ---
- // const p2 = React.createElement("p", { id: "para" }, "This is a paragraph with id");
- // const root3 = createRoot(document.getElementById("root3"));
- // root3.render(p2);
- // // --- Nested div structure (Example 1) ---
- // const parent = React.createElement(
- //   "div",
- //   { id: "parent" },
- //   [
- //     React.createElement(
- //       "div",
- //       { id: "child", key: "child1" },
- //       [React.createElement("h1", { key: "h1-1" }, "I'm h1 Tag")]
- //     ),
- //     React.createElement(
- //       "div",
- //       { id: "child", key: "child2" },
- //       [React.createElement("h1", { key: "h1-2" }, "I'm h1 Tag")]
- //     ),
- //   ]
- // );
- // const root4 = createRoot(document.getElementById("root4"));
- // root4.render(parent);
- // // --- Nested div structure (Example 2) ---
- // const parent2 = React.createElement(
- //   "div",
- //   { id: "parent" },
- //   [
- //     React.createElement(
- //       "div",
- //       { id: "child", key: "child1" },
- //       [
- //         React.createElement("h1", { key: "h1-1" }, "I'm h1x Tag"),
- //         React.createElement("h2", { key: "h2-1" }, "I'm h2 Tag"),
- //       ]
- //     ),
- //     React.createElement(
- //       "div",
- //       { id: "child", key: "child2" },
- //       [
- //         React.createElement("h1", { key: "h1-2" }, "I'm h1 Tag"),
- //         React.createElement("h2", { key: "h2-2" }, "I'm h2 Tag"),
- //       ]
- //     ),
- //   ]
- // );
- // const root5 = createRoot(document.getElementById("root5"));
- // root5.render(parent2);
+// ✅ Render functional component
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Heading, {}, void 0, false, {
+    fileName: "app.js",
+    lineNumber: 112,
+    columnNumber: 13
+}, undefined));
+var _c, _c1;
+$RefreshReg$(_c, "Title");
+$RefreshReg$(_c1, "Heading");
 
   $parcel$ReactRefreshHelpers$5fe5.postlude(module);
 } finally {

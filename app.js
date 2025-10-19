@@ -1,5 +1,3 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
 
 
 // const heading = React.createElement(
@@ -12,11 +10,8 @@ import { createRoot } from "react-dom/client";
 // root.render(heading);
 
 
-const heading = (
-    <h2 className="heading">Namaste React from JSX</h2>);
- 
-const root = createRoot(document.getElementById("root"));
-root.render(heading);
+
+
 // // --- Single heading ---
 // const heading = React.createElement(
 //   "h1",
@@ -81,3 +76,37 @@ root.render(heading);
 // );
 // const root5 = createRoot(document.getElementById("root5"));
 // root5.render(parent2);
+
+
+
+
+import React from "react";
+import { createRoot } from "react-dom/client";
+
+// ✅ Simple JSX element example (optional)
+const heading = (
+  <h2 className="heading">
+    Namaste React from JSX directly
+  </h2>
+);
+
+// ✅ Title Component
+const Title = () => (
+  <h2 className="title">This is a Title</h2>
+);
+
+// ✅ Heading Component (uses Title component inside)
+const Heading = () => (
+  <div className="heading-container">
+    <h2 className="heading">
+      Namaste React from JSX via React Functional Component
+    </h2>
+    <Title />
+  </div>
+);
+
+// ✅ Create React root
+const root = createRoot(document.getElementById("root"));
+
+// ✅ Render functional component
+root.render(<Heading />);
