@@ -812,6 +812,15 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
         columnNumber: 3
     }, undefined);
 _c = Title;
+const Card = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+        className: "Card",
+        children: "This is a paragraph"
+    }, void 0, false, {
+        fileName: "app.js",
+        lineNumber: 100,
+        columnNumber: 3
+    }, undefined);
+_c1 = Card;
 // ✅ Heading Component (uses Title component inside)
 const Heading = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "heading-container",
@@ -821,32 +830,38 @@ const Heading = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: "Namaste React from JSX via React Functional Component"
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 101,
+                lineNumber: 106,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 104,
+                lineNumber: 109,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 110,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 100,
+        lineNumber: 105,
         columnNumber: 3
     }, undefined);
-_c1 = Heading;
+_c2 = Heading;
 // ✅ Create React root
 const root = (0, _client.createRoot)(document.getElementById("root"));
 // ✅ Render functional component
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Heading, {}, void 0, false, {
     fileName: "app.js",
-    lineNumber: 112,
+    lineNumber: 118,
     columnNumber: 13
 }, undefined));
-var _c, _c1;
+var _c, _c1, _c2;
 $RefreshReg$(_c, "Title");
-$RefreshReg$(_c1, "Heading");
+$RefreshReg$(_c1, "Card");
+$RefreshReg$(_c2, "Heading");
 
   $parcel$ReactRefreshHelpers$5fe5.postlude(module);
 } finally {
