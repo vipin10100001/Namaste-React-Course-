@@ -793,53 +793,65 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
-// ✅ Simple JSX element example (optional)
 const heading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
     className: "heading",
     children: "Namaste React from JSX directly"
 }, void 0, false, {
     fileName: "app.js",
-    lineNumber: 88,
-    columnNumber: 3
+    lineNumber: 84,
+    columnNumber: 17
 }, undefined);
-// ✅ Title Component
 const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
         className: "title",
         children: "This is a Title"
     }, void 0, false, {
         fileName: "app.js",
-        lineNumber: 95,
-        columnNumber: 3
+        lineNumber: 86,
+        columnNumber: 21
     }, undefined);
 _c = Title;
-const Card1 = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+const TitleSmall = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
+        children: "Title"
+    }, void 0, false, {
+        fileName: "app.js",
+        lineNumber: 88,
+        columnNumber: 26
+    }, undefined);
+_c1 = TitleSmall;
+const elem = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+    children: "YO "
+}, void 0, false, {
+    fileName: "app.js",
+    lineNumber: 89,
+    columnNumber: 12
+}, undefined);
+const Card1 = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
         className: "Card",
         children: [
-            "This is a paragraph 1 ",
+            " ",
+            elem,
+            " This is a paragraph 1 ",
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 100,
+                lineNumber: 91,
                 columnNumber: 53
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 100,
-        columnNumber: 11
+        lineNumber: 91,
+        columnNumber: 3
     }, undefined);
-};
-_c1 = Card1;
+_c2 = Card1;
 const Card2 = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
         className: "Card",
         children: "This is a paragraph 2"
     }, void 0, false, {
         fileName: "app.js",
-        lineNumber: 104,
-        columnNumber: 4
+        lineNumber: 96,
+        columnNumber: 3
     }, undefined);
-_c2 = Card2;
-// ✅ Heading Component (uses Title component inside)
+_c3 = Card2;
 const Heading = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "heading-container",
         children: [
@@ -848,44 +860,55 @@ const Heading = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: "Namaste React from JSX via React Functional Component"
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 111,
+                lineNumber: 101,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                children: 300
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 104,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 114,
+                lineNumber: 105,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card1, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 115,
+                lineNumber: 106,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(TitleSmall, {}, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 107,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card2, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 116,
+                lineNumber: 108,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 110,
+        lineNumber: 100,
         columnNumber: 3
     }, undefined);
-_c3 = Heading;
-// ✅ Create React root
+_c4 = Heading;
 const root = (0, _client.createRoot)(document.getElementById("root"));
-// ✅ Render functional component
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Heading, {}, void 0, false, {
     fileName: "app.js",
-    lineNumber: 124,
+    lineNumber: 113,
     columnNumber: 13
 }, undefined));
-var _c, _c1, _c2, _c3;
+var _c, _c1, _c2, _c3, _c4;
 $RefreshReg$(_c, "Title");
-$RefreshReg$(_c1, "Card1");
-$RefreshReg$(_c2, "Card2");
-$RefreshReg$(_c3, "Heading");
+$RefreshReg$(_c1, "TitleSmall");
+$RefreshReg$(_c2, "Card1");
+$RefreshReg$(_c3, "Card2");
+$RefreshReg$(_c4, "Heading");
 
   $parcel$ReactRefreshHelpers$5fe5.postlude(module);
 } finally {

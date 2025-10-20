@@ -78,47 +78,36 @@
 // root5.render(parent2);
 
 
-
-
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-// ✅ Simple JSX element example (optional)
-const heading = (
-  <h2 className="heading">
-    Namaste React from JSX directly
-  </h2>
+const heading = <h2 className="heading">Namaste React from JSX directly</h2>;
+
+const Title = () => <h2 className="title">This is a Title</h2>;
+
+const TitleSmall = () => <h6>Title</h6>;
+const elem=<span>YO </span>
+const Card1 = () => (
+  <p className="Card"> {elem} This is a paragraph 1 <br /></p>
+  
 );
 
-// ✅ Title Component
-const Title = () => (
-  <h2 className="title">This is a Title</h2>
+const Card2 = () => (
+  <p className="Card">This is a paragraph 2</p>
 );
 
-
-const Card1= () => {
-  return  <p className="Card">This is a paragraph 1 <br></br></p>
-};
-
-const Card2= () => (
-   <p className="Card">This is a paragraph 2</p>
-);
-
-
-// ✅ Heading Component (uses Title component inside)
 const Heading = () => (
   <div className="heading-container">
     <h2 className="heading">
       Namaste React from JSX via React Functional Component
     </h2>
+    <h5>{100 + 200}</h5>
     <Title />
     <Card1 />
+    <TitleSmall />
     <Card2 />
   </div>
 );
 
-// ✅ Create React root
 const root = createRoot(document.getElementById("root"));
-
-// ✅ Render functional component
 root.render(<Heading />);
