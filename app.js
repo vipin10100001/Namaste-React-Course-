@@ -96,9 +96,14 @@ const Title = () => (
 );
 
 
-const Card= () =>(
-  <p className="Card">This is a paragraph</p>
+const Card1= () => {
+  return  <p className="Card">This is a paragraph 1 <br></br></p>
+};
+
+const Card2= () => (
+   <p className="Card">This is a paragraph 2</p>
 );
+
 
 // ✅ Heading Component (uses Title component inside)
 const Heading = () => (
@@ -107,7 +112,8 @@ const Heading = () => (
       Namaste React from JSX via React Functional Component
     </h2>
     <Title />
-    <Card />
+    <Card1 />
+    <Card2 />
   </div>
 );
 
