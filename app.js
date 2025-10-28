@@ -1,24 +1,32 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-
-
-const Header =() =>{
+const Header = () => {
   return (
     <div className="header">
-                       <div className="logo-container">
-                               <img src="https://share.google/images/YBOVBnHABQJoS90qJ"></img>
-                      </div>
+      <div className="logo-container">
+        <img src="https://share.google/images/YBOVBnHABQJoS90qJ" alt="logo" />
+      </div>
 
-                    <div className="nav-items">
-    
-                     </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-
-
-const AppLayout=() =>{
+const AppLayout = () => {
   return (
-    <div className="app"> </div>
-  )
-}
+    <div className="app">
+      <Header />
+    </div>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />);
