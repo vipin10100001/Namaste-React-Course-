@@ -21,11 +21,17 @@ Contact */
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const RestuarantCard=() =>{
+const RestuarantCard=(props) =>{
+  console.log(props);
   return (
 <div className="res-card">
         <h3>Meghna Foods</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpJivCCXW_14iTjVaacn0ZXVVKG7EMv1Oteg&s" />
+        <img className="res-logo"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpJivCCXW_14iTjVaacn0ZXVVKG7EMv1Oteg&s" />
+
+        <h3>Biriyani , North Indian , Asian </h3>
+        <h4>4.3</h4>
+        <p>30 Minutes</p>
+        
 </div>
 
   )
@@ -39,8 +45,9 @@ const Body=() =>{
            <div className="Search">Search
 
                   <div className="res-container">
-                   
-                  <RestuarantCard />
+                    
+                  <RestuarantCard  res-name="Meghna Food" cuisine="Biriyani , North Indian , Asian "/>
+                  
 
                     </div>
           </div>
@@ -52,7 +59,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img  className="logo" src="https://png.pngtree.com/png-vector/20220623/ourmid/pngtree-food-logo-png-image_5296974.png"  />
+        <img   className="logo" src="https://png.pngtree.com/png-vector/20220623/ourmid/pngtree-food-logo-png-image_5296974.png"  />
       </div>
 
       <div className="nav-items">

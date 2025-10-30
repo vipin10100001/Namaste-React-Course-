@@ -27,9 +27,25 @@
   border: 1px solid #000;
   width: 200px;
   height: 300px;
+  margin: 3px;
+  padding: 50px;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px #000;
 }
 
 .Search {
   padding: 10px;
+}
+
+.res-logo {
+  width: 100%;
+  margin: 5px;
+}
+
+.res-container {
+  display: flex;
 }
 /*# sourceMappingURL=Namaste-React-Course-.9e4c6fd2.css.map */
