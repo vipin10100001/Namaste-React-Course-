@@ -22,17 +22,19 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 const RestuarantCard=(props) =>{
-  console.log(props);
+  const {resname,photo,cuisine,rating}=props;
+  console.log(props); 
   return (
 <div className="res-card">
-        <h3>Meghna Foods</h3>
-        <img className="res-logo"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpJivCCXW_14iTjVaacn0ZXVVKG7EMv1Oteg&s" />
+        <h3>{props.resname}</h3>
+        <img className="res-logo"  src={props.photo} />
 
-        <h3 style={{backgroundColor:"red"}}>Biriyani , North Indian , Asian </h3>
-        <h4>4.3</h4>
-        <h5>{console.log("lol this is h5")}</h5>
-        <p>30 Minutes</p>
+
+        <h3 style={{backgroundColor:"red"}}>{props.cuisine}</h3>
+        <h4>{props.rating}</h4>
         
+        <p>30 Minutes</p>
+         
 </div>
 
   )
@@ -47,7 +49,8 @@ const Body=() =>{
 
                   <div className="res-container">
                     
-                  <RestuarantCard  res-name="Meghna Food" cuisine="Biriyani , North Indian , Asian "/>
+                  <RestuarantCard  resname="Meghna Food" cuisine="Biriyani , North Indian , Asian " photo="https://encrypted-tbn0.gstatic.com/images?q=tbn:AN d9GcRpJivCCXW_14iTjVaacn0ZXVVKG7EMv1Oteg&s" rating="4.3" />
+                  <RestuarantCard  resname="Hotel Taj" cuisine=" Chicken Biriyani , North Indian , Asian " photo ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7eQnWra28mt4EcXQRE23Q2s9X-Z1ivWCVPw&s" rating ="4.1"/>
                   
 
                     </div>
