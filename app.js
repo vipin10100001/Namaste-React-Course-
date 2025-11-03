@@ -28,8 +28,9 @@ const RestuarantCard=(props) =>{
         <h3>Meghna Foods</h3>
         <img className="res-logo"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpJivCCXW_14iTjVaacn0ZXVVKG7EMv1Oteg&s" />
 
-        <h3>Biriyani , North Indian , Asian </h3>
+        <h3 style={{backgroundColor:"red"}}>Biriyani , North Indian , Asian </h3>
         <h4>4.3</h4>
+        <h5>{console.log("lol this is h5")}</h5>
         <p>30 Minutes</p>
         
 </div>
