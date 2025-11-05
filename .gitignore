@@ -1,2 +1,4 @@
 /node-modules
-/.parcel-cache/data.mdb
+
+# parcel cache
+.parcel-cache/
