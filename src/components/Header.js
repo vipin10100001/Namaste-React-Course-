@@ -1,10 +1,13 @@
+import { LOGO_URL } from "../utils/constant";
+
+
 const Header = () => {
     return (
       <div className="header">
         <div className="logo-container">
           <img
             className="logo"
-            src="https://png.pngtree.com/png-vector/20220623/ourmid/pngtree-food-logo-png-image_5296974.png"
+            src={LOGO_URL}
             alt="App Logo"
           />
         </div>
