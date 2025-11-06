@@ -126,4 +126,9 @@ body {
     width: 80%;
   }
 }
+
+.filter-btn {
+  cursor: pointer;
+  margin: 10px;
+}
 /*# sourceMappingURL=Namaste-React-Course-.9e4c6fd2.css.map */
