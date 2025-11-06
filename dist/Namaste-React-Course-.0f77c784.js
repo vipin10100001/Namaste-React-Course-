@@ -727,69 +727,19 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-const RestaurantCard = (props)=>{
-    const { resname, cuisine, photo, rating } = props;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "res-card",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: resname
-            }, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "res-logo",
-                src: photo,
-                alt: resname
-            }, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                style: {
-                    backgroundColor: "red"
-                },
-                children: cuisine
-            }, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: [
-                    rating,
-                    " \u2B50"
-                ]
-            }, void 0, true, {
-                fileName: "src/app.js",
-                lineNumber: 11,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "30 Minutes"
-            }, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 12,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/app.js",
-        lineNumber: 7,
-        columnNumber: 5
-    }, undefined);
-};
-_c = RestaurantCard;
+var _header = require("./components/Header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _body = require("./components/Body");
+var _bodyDefault = parcelHelpers.interopDefault(_body);
+var _restaurantCard = require("./components/RestaurantCard");
+var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
 const resObj = [
     {
         type: "restaurant",
         data: {
             resname: "Meghna Food",
             cuisine: "Biriyani, North Indian, Asian",
-            photo: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae4a6?auto=format&fit=crop&w=500&q=80",
+            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/19/3dd093d6-0c2b-4d2b-94bd-fc902fa7314b_872785.JPG",
             rating: "4.3"
         }
     },
@@ -798,7 +748,7 @@ const resObj = [
         data: {
             resname: "Hotel Taj",
             cuisine: "Chicken Biriyani, North Indian, Asian",
-            photo: "https://images.unsplash.com/photo-1632827421651-69a7563c0e6e?auto=format&fit=crop&w=500&q=80",
+            photo: "https://c8.alamy.com/comp/HNPJTD/grilled-burget-cutlet-with-pepper-and-salad-leaes-HNPJTD.jpg",
             rating: "4.1"
         }
     },
@@ -816,7 +766,7 @@ const resObj = [
         data: {
             resname: "KFC",
             cuisine: "Fried Chicken, Burgers, Fast Food",
-            photo: "https://images.unsplash.com/photo-1606755962773-0a8b0a092ec3?auto=format&fit=crop&w=500&q=80",
+            photo: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             rating: "4.2"
         }
     },
@@ -843,7 +793,7 @@ const resObj = [
         data: {
             resname: "Subway",
             cuisine: "Healthy, Sandwich, Fast Food",
-            photo: "https://images.unsplash.com/photo-1601924582971-cf7d9f3a01ed?auto=format&fit=crop&w=500&q=80",
+            photo: "https://i.ytimg.com/vi/LTT2xRaDXxI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCnXKCpyX1-cW0S1g5fgHITx17H-g",
             rating: "4.1"
         }
     },
@@ -884,151 +834,43 @@ const resObj = [
         }
     }
 ];
-const Body = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "body",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search",
-                children: "Search"
-            }, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 136,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "res-container",
-                children: resObj.map((restaurant, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
-                        ...restaurant.data
-                    }, index, false, {
-                        fileName: "src/app.js",
-                        lineNumber: 139,
-                        columnNumber: 11
-                    }, undefined))
-            }, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 137,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/app.js",
-        lineNumber: 135,
-        columnNumber: 5
-    }, undefined);
-};
-_c1 = Body;
-const Header = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "header",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "logo-container",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "logo",
-                    src: "https://png.pngtree.com/png-vector/20220623/ourmid/pngtree-food-logo-png-image_5296974.png",
-                    alt: "App Logo"
-                }, void 0, false, {
-                    fileName: "src/app.js",
-                    lineNumber: 150,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 149,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-items",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Home"
-                        }, void 0, false, {
-                            fileName: "src/app.js",
-                            lineNumber: 159,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "About Us"
-                        }, void 0, false, {
-                            fileName: "src/app.js",
-                            lineNumber: 160,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contact Us"
-                        }, void 0, false, {
-                            fileName: "src/app.js",
-                            lineNumber: 161,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Cart"
-                        }, void 0, false, {
-                            fileName: "src/app.js",
-                            lineNumber: 162,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/app.js",
-                    lineNumber: 158,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 157,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/app.js",
-        lineNumber: 148,
-        columnNumber: 5
-    }, undefined);
-};
-_c2 = Header;
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "app",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 172,
+                lineNumber: 130,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 173,
+                lineNumber: 131,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/app.js",
-        lineNumber: 171,
+        lineNumber: 129,
         columnNumber: 5
     }, undefined);
 };
-_c3 = AppLayout;
+_c = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "src/app.js",
-    lineNumber: 179,
+    lineNumber: 137,
     columnNumber: 13
 }, undefined));
-var _c, _c1, _c2, _c3;
-$RefreshReg$(_c, "RestaurantCard");
-$RefreshReg$(_c1, "Body");
-$RefreshReg$(_c2, "Header");
-$RefreshReg$(_c3, "AppLayout");
+var _c;
+$RefreshReg$(_c, "AppLayout");
 
   $parcel$ReactRefreshHelpers$0bfa.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./components/Header":"3PJ6N","./components/Body":"loQlg","./components/RestaurantCard":"lCpT9"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -19990,6 +19832,330 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["7wZbQ","2R06K"], "2R06K", "parcelRequire164e", {}, null, null, "http://localhost:1234")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"3PJ6N":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$d118 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$d118.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d118.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Header = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "logo-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "logo",
+                    src: "https://png.pngtree.com/png-vector/20220623/ourmid/pngtree-food-logo-png-image_5296974.png",
+                    alt: "App Logo"
+                }, void 0, false, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 5,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 4,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "nav-items",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Home"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 14,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "About Us"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 15,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Contact Us"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 16,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Cart"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 17,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 13,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 12,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Header.js",
+        lineNumber: 3,
+        columnNumber: 7
+    }, undefined);
+};
+_c = Header;
+exports.default = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$d118.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"loQlg":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$8a58 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$8a58.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8a58.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _restaurantCard = require("./RestaurantCard");
+var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
+const resObj = [
+    {
+        type: "restaurant",
+        data: {
+            resname: "Meghna Food",
+            cuisine: "Biriyani, North Indian, Asian",
+            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/19/3dd093d6-0c2b-4d2b-94bd-fc902fa7314b_872785.JPG",
+            rating: "4.3"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            resname: "Hotel Taj",
+            cuisine: "Chicken Biriyani, North Indian, Asian",
+            photo: "https://c8.alamy.com/comp/HNPJTD/grilled-burget-cutlet-with-pepper-and-salad-leaes-HNPJTD.jpg",
+            rating: "4.1"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            resname: "Domino\u2019s Pizza",
+            cuisine: "Pizza, Italian, Fast Food",
+            photo: "https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=500&q=80",
+            rating: "4.5"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            resname: "KFC",
+            cuisine: "Fried Chicken, Burgers, Fast Food",
+            photo: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            rating: "4.2"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            resname: "China Town",
+            cuisine: "Chinese, Asian, Noodles, Dumplings",
+            photo: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=500&q=80",
+            rating: "4.0"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            resname: "Barbeque Nation",
+            cuisine: "Grill, Buffet, North Indian",
+            photo: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=80",
+            rating: "4.4"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            resname: "Subway",
+            cuisine: "Healthy, Sandwich, Fast Food",
+            photo: "https://i.ytimg.com/vi/LTT2xRaDXxI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCnXKCpyX1-cW0S1g5fgHITx17H-g",
+            rating: "4.1"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            resname: "The Pasta Bowl Company",
+            cuisine: "Italian, Continental, Salads",
+            photo: "https://images.unsplash.com/photo-1603133872878-684f1b27b4e9?auto=format&fit=crop&w=500&q=80",
+            rating: "4.6"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            resname: "Burger King",
+            cuisine: "Burgers, Fries, Beverages",
+            photo: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=80",
+            rating: "4.3"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            resname: "Sagar Ratna",
+            cuisine: "South Indian, Vegetarian, Dosa",
+            photo: "https://images.unsplash.com/photo-1640601866401-8ffccbb7f3f1?auto=format&fit=crop&w=500&q=80",
+            rating: "4.2"
+        }
+    },
+    {
+        type: "restaurant",
+        data: {
+            resname: "Royal Bakers",
+            cuisine: "Bakery, Snacks, Desserts",
+            photo: "https://images.unsplash.com/photo-1605475128023-439b7bca2c30?auto=format&fit=crop&w=500&q=80",
+            rating: "4.5"
+        }
+    }
+];
+const Body = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "body",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search",
+                children: "Search"
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 121,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "res-container",
+                children: resObj.map((restaurant, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                        ...restaurant.data
+                    }, index, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 124,
+                        columnNumber: 13
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 122,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Body.js",
+        lineNumber: 120,
+        columnNumber: 7
+    }, undefined);
+};
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$8a58.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./RestaurantCard":"lCpT9"}],"lCpT9":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$7721 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$7721.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7721.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const RestaurantCard = (props)=>{
+    const { resname, cuisine, photo, rating } = props;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "res-card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: resname
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 5,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "res-logo",
+                src: photo,
+                alt: resname
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 6,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                style: {
+                    backgroundColor: "red"
+                },
+                children: cuisine
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 7,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: [
+                    rating,
+                    " \u2B50"
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 8,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "30 Minutes"
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 9,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RestaurantCard.js",
+        lineNumber: 4,
+        columnNumber: 7
+    }, undefined);
+};
+_c = RestaurantCard;
+exports.default = RestaurantCard;
+var _c;
+$RefreshReg$(_c, "RestaurantCard");
+
+  $parcel$ReactRefreshHelpers$7721.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["7wZbQ","2R06K"], "2R06K", "parcelRequire164e", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=Namaste-React-Course-.0f77c784.js.map

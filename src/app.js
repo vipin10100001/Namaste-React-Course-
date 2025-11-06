@@ -1,18 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-const RestaurantCard = (props) => {
-  const { resname, cuisine, photo, rating } = props;
-  return (
-    <div className="res-card">
-      <h3>{resname}</h3>
-      <img className="res-logo" src={photo} alt={resname} />
-      <h3 style={{ backgroundColor: "red" }}>{cuisine}</h3>
-      <h4>{rating} ⭐</h4>
-      <p>30 Minutes</p>
-    </div>
-  );
-};
+import Header from "./components/Header";
+import Body from "./components/Body";
+import RestaurantCard from "./components/RestaurantCard";
 
 
 const resObj = [
@@ -22,7 +12,7 @@ const resObj = [
       resname: "Meghna Food",
       cuisine: "Biriyani, North Indian, Asian",
       photo:
-        "https://images.unsplash.com/photo-1603894584373-5ac82b2ae4a6?auto=format&fit=crop&w=500&q=80",
+        "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/19/3dd093d6-0c2b-4d2b-94bd-fc902fa7314b_872785.JPG",
       rating: "4.3",
     },
   },
@@ -32,7 +22,7 @@ const resObj = [
       resname: "Hotel Taj",
       cuisine: "Chicken Biriyani, North Indian, Asian",
       photo:
-        "https://images.unsplash.com/photo-1632827421651-69a7563c0e6e?auto=format&fit=crop&w=500&q=80",
+        "https://c8.alamy.com/comp/HNPJTD/grilled-burget-cutlet-with-pepper-and-salad-leaes-HNPJTD.jpg",
       rating: "4.1",
     },
   },
@@ -52,7 +42,7 @@ const resObj = [
       resname: "KFC",
       cuisine: "Fried Chicken, Burgers, Fast Food",
       photo:
-        "https://images.unsplash.com/photo-1606755962773-0a8b0a092ec3?auto=format&fit=crop&w=500&q=80",
+        "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       rating: "4.2",
     },
   },
@@ -82,7 +72,7 @@ const resObj = [
       resname: "Subway",
       cuisine: "Healthy, Sandwich, Fast Food",
       photo:
-        "https://images.unsplash.com/photo-1601924582971-cf7d9f3a01ed?auto=format&fit=crop&w=500&q=80",
+        "https://i.ytimg.com/vi/LTT2xRaDXxI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCnXKCpyX1-cW0S1g5fgHITx17H-g",
       rating: "4.1",
     },
   },
@@ -130,41 +120,9 @@ const resObj = [
 
   
 
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-      <div className="res-container">
-        {resObj.map((restaurant, index) => (
-          <RestaurantCard key={index} {...restaurant.data} />
-        ))}
-      </div>
-    </div>
-  );
-};
 
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://png.pngtree.com/png-vector/20220623/ourmid/pngtree-food-logo-png-image_5296974.png"
-          alt="App Logo"
-        />
-      </div>
 
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+
 
 const AppLayout = () => {
   return (
