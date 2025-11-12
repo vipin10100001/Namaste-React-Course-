@@ -19748,55 +19748,118 @@ var _restaurantCard = require("./RestaurantCard");
 var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
 var _mockdata = require("../utils/mockdata");
 var _mockdataDefault = parcelHelpers.interopDefault(_mockdata);
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _s = $RefreshSig$();
-const Body = ()=>{
+function Body() {
     _s();
-    const [restaurants, setRestaurants] = (0, _react.useState)((0, _mockdataDefault.default));
+    const [restaurants, setRestaurants] = (0, _react.useState)([]);
+    const [loading, setLoading] = (0, _react.useState)(true);
+    (0, _react.useEffect)(()=>{
+        // Simulate API fetch using mock data
+        const fetchMockData = ()=>{
+            setTimeout(()=>{
+                setRestaurants((0, _mockdataDefault.default));
+                setLoading(false);
+            }, 1000); // just for loading effect
+        };
+        fetchMockData();
+    }, []);
     const filterTopRated = ()=>{
-        const filteredList = (0, _mockdataDefault.default).filter((b)=>parseFloat(b.data.rating) > 4.2);
+        const filteredList = (0, _mockdataDefault.default).filter((b)=>parseFloat(b.data.rating) > 4.3);
         setRestaurants(filteredList);
     };
+    const resetFilter = ()=>{
+        setRestaurants((0, _mockdataDefault.default));
+    };
+    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 37,
+        columnNumber: 12
+    }, this);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "filter",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    className: "filter-btn",
-                    onClick: filterTopRated,
-                    children: "Top Rated Restaurants"
-                }, void 0, false, {
-                    fileName: "src/components/Body.js",
-                    lineNumber: 19,
-                    columnNumber: 9
-                }, undefined)
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "title",
+                children: "\uD83C\uDF7D Restaurants in Bangalore"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 18,
+                lineNumber: 44,
                 columnNumber: 7
-            }, undefined),
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 47,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        children: "Search"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 48,
+                        columnNumber: 7
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 46,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "filter",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "filter-btn",
+                        onClick: filterTopRated,
+                        children: "\u2B50 Top Rated (4.3+)"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 53,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "filter-btn",
+                        onClick: resetFilter,
+                        children: "\uD83D\uDD04 Reset"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 56,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 52,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "res-container",
                 children: restaurants.map((restaurant, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
                         ...restaurant.data
                     }, index, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 26,
+                        lineNumber: 63,
                         columnNumber: 11
-                    }, undefined))
+                    }, this))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 24,
+                lineNumber: 61,
                 columnNumber: 7
-            }, undefined)
+            }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 17,
+        lineNumber: 43,
         columnNumber: 5
-    }, undefined);
-};
-_s(Body, "p/QU/yE6Dc2/ThAeefrktwVRvxY=");
+    }, this);
+}
+_s(Body, "KE7sPWcjF/91qlAiVua3fsMKPsQ=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -19807,7 +19870,7 @@ $RefreshReg$(_c, "Body");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","./RestaurantCard":"lCpT9","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U","../utils/mockdata":"1r8tT"}],"lCpT9":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","./RestaurantCard":"lCpT9","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../utils/mockdata":"1r8tT","react":"jMk1U","./Shimmer":"fSZbx"}],"lCpT9":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$7721 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$7721.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -19892,7 +19955,7 @@ const resObj = [
         data: {
             resname: "Meghna Food",
             cuisine: "Biriyani, North Indian, Asian",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/mbckv4x49jngl7czzxhl",
+            photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bangladeshi_Biryani.jpg/250px-Bangladeshi_Biryani.jpg",
             rating: "4.3",
             deliveryTime: "30 Minutes"
         }
@@ -19902,7 +19965,7 @@ const resObj = [
         data: {
             resname: "Hotel Taj",
             cuisine: "Chicken Biriyani, North Indian, Asian",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/ek2yapj6wkr3nbd9xyba",
+            photo: "https://media.easemytrip.com/media/Blog/India/637006193676361092/637006193676361092aFt5NW.jpg",
             rating: "4.1",
             deliveryTime: "32 Minutes"
         }
@@ -19912,7 +19975,7 @@ const resObj = [
         data: {
             resname: "Domino\u2019s Pizza",
             cuisine: "Pizza, Italian, Fast Food",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/okgglzaixx8vkh1fxth3",
+            photo: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/0d/14/43/muy-buena.jpg?w=900&h=500&s=1",
             rating: "4.5",
             deliveryTime: "28 Minutes"
         }
@@ -19932,7 +19995,7 @@ const resObj = [
         data: {
             resname: "China Town",
             cuisine: "Chinese, Asian, Noodles, Dumplings",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/wbqmu2r1dxdvxxsug8tq",
+            photo: "https://content.jdmagicbox.com/v2/comp/mumbai/c5/022p1228899921b1x5c5/catalogue/china-village-restaurant-goregaon-east-mumbai-thai-restaurants-0kmuxsqjlo.jpg",
             rating: "4.0",
             deliveryTime: "33 Minutes"
         }
@@ -19942,7 +20005,7 @@ const resObj = [
         data: {
             resname: "Barbeque Nation",
             cuisine: "Grill, Buffet, North Indian",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/xvrrlqkooh3ds5awqh1p",
+            photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0VRd5W3bsjn4nnuVS8RIfucTjyvulxsBaTQ&s",
             rating: "4.4",
             deliveryTime: "36 Minutes"
         }
@@ -19952,7 +20015,7 @@ const resObj = [
         data: {
             resname: "Subway",
             cuisine: "Healthy, Sandwich, Fast Food",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/cfcyhxttgtrmyr7t6ubv",
+            photo: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/veg-grilled-sandwich-recipe.jpg",
             rating: "4.1",
             deliveryTime: "25 Minutes"
         }
@@ -19962,7 +20025,7 @@ const resObj = [
         data: {
             resname: "The Pasta Bowl Company",
             cuisine: "Italian, Continental, Salads",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/lsncoqhwrrf5wsn5t3tr",
+            photo: "https://www.spicebangla.com/wp-content/uploads/2024/08/Spicy-Pasta-recipe-optimised-scaled.webp",
             rating: "4.6",
             deliveryTime: "29 Minutes"
         }
@@ -19972,7 +20035,7 @@ const resObj = [
         data: {
             resname: "Burger King",
             cuisine: "Burgers, Fries, Beverages",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/eqj7s8hxftfheqjztq9m",
+            photo: "https://assets.bonappetit.com/photos/5b919cb83d923e31d08fed17/4:3/w_2666,h_2000,c_limit/basically-burger-1.jpg",
             rating: "4.3",
             deliveryTime: "31 Minutes"
         }
@@ -19982,7 +20045,7 @@ const resObj = [
         data: {
             resname: "Sagar Ratna",
             cuisine: "South Indian, Vegetarian, Dosa",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/vxglhzvfnprsgf7ssbya",
+            photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7P9-ECimzMDQMWGiu2XnSWErvEqRmz5rTaw&s",
             rating: "4.2",
             deliveryTime: "33 Minutes"
         }
@@ -19992,7 +20055,7 @@ const resObj = [
         data: {
             resname: "Royal Bakers",
             cuisine: "Bakery, Snacks, Desserts",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/qldpfw5uhlhkb5sg2qgk",
+            photo: "https://bizimages.withfloats.com/actual/8a9475a8d9aa4cb0ad217afe3ee38bee.jpg",
             rating: "4.5",
             deliveryTime: "26 Minutes"
         }
@@ -20002,7 +20065,7 @@ const resObj = [
         data: {
             resname: "Caf\xe9 Coffee Day",
             cuisine: "Cafe, Beverages, Desserts",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/yvjqgbckd3iwhkg2nwyu",
+            photo: "https://content.jdmagicbox.com/comp/def_content/coffee_shops/default-coffee-shops-7.jpg",
             rating: "4.1",
             deliveryTime: "34 Minutes"
         }
@@ -20012,7 +20075,7 @@ const resObj = [
         data: {
             resname: "Thalassery Kitchen",
             cuisine: "Kerala, Malabar, Biriyani",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/vibehy2a3ofjqgzvcmkr",
+            photo: "https://farm5.staticflickr.com/4206/34630446624_ec6133ed16_o_d.jpg",
             rating: "4.4",
             deliveryTime: "35 Minutes"
         }
@@ -20022,7 +20085,7 @@ const resObj = [
         data: {
             resname: "Punjabi Dhaba",
             cuisine: "North Indian, Tandoor, Roti",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/mwhlg9ex4qdbgsfjzy8g",
+            photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTkYFnrVYkLErtIaxF4-N0mDW-Ldguh5LlTg&s",
             rating: "4.3",
             deliveryTime: "30 Minutes"
         }
@@ -20032,7 +20095,7 @@ const resObj = [
         data: {
             resname: "Pind Balluchi",
             cuisine: "Punjabi, Mughlai, Grill",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/tcfmvhq0mwrrn0rpq2l1",
+            photo: "https://static.toiimg.com/thumb/msid-61846577,width-1280,height-720,resizemode-4/61846577.jpg",
             rating: "4.5",
             deliveryTime: "28 Minutes"
         }
@@ -20052,7 +20115,7 @@ const resObj = [
         data: {
             resname: "Arabian Dreams",
             cuisine: "Shawarma, Arabian, Grilled Meat",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/kcclu8bkm4aue3a6z4f4",
+            photo: "https://www.tasteofhome.com/wp-content/uploads/2024/05/Cacio-e-Pepe_EXPS_TOHcom23_273412_P2_MD_04_26_5b.jpg",
             rating: "4.2",
             deliveryTime: "27 Minutes"
         }
@@ -20062,7 +20125,7 @@ const resObj = [
         data: {
             resname: "Veggie Delight",
             cuisine: "Vegan, Healthy, Salads",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/vpqtqoybjyyts3jcb4tt",
+            photo: "https://www.tasteofhome.com/wp-content/uploads/2025/02/Favorite-Mediterranean-Salad_EXPS_TOHcom25_41556_MD_P2_02_05_1b.jpg",
             rating: "4.3",
             deliveryTime: "30 Minutes"
         }
@@ -20137,161 +20200,64 @@ const resObj = [
             rating: "4.4",
             deliveryTime: "35 Minutes"
         }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Mainland China",
-            cuisine: "Chinese, Thai, Asian",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/x6mff0jlfirvdxlwbnxk",
-            rating: "4.5",
-            deliveryTime: "37 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Thomson Grill",
-            cuisine: "Grill, Barbecue, Continental",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/izubjvbxgsefnfv7qymd",
-            rating: "4.2",
-            deliveryTime: "30 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Chai Point",
-            cuisine: "Beverages, Snacks, Tea",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/mczp7hnjgbbmvbw9oyxb",
-            rating: "4.3",
-            deliveryTime: "27 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "A2B Adyar Ananda Bhavan",
-            cuisine: "South Indian, Pure Veg, Sweets",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/vxhyqvyq1v6dpwcmc5pv",
-            rating: "4.5",
-            deliveryTime: "28 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Frozen Treats",
-            cuisine: "Ice Cream, Desserts",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/nmhm8w3dmnshdcin1zrl",
-            rating: "4.4",
-            deliveryTime: "25 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Gokul Oottupura",
-            cuisine: "Kerala, Vegetarian Meals",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/rgzk2csah7nrhvfltjyu",
-            rating: "4.3",
-            deliveryTime: "31 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Juice World",
-            cuisine: "Juices, Shakes, Beverages",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/lrbq4tvpqbrscxk6bvcu",
-            rating: "4.2",
-            deliveryTime: "26 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Tandoor Flames",
-            cuisine: "North Indian, Grill, Mughlai",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/dyrfj2cjquzhxlnpceyy",
-            rating: "4.4",
-            deliveryTime: "33 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Bake My Day",
-            cuisine: "Bakery, Pastry, Snacks",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/n2t1jvv8xlp1gve6dtbz",
-            rating: "4.6",
-            deliveryTime: "29 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Hakka House",
-            cuisine: "Chinese, Stir Fry, Noodles",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/w6gxpxjqxmtm4kgk2e1y",
-            rating: "4.3",
-            deliveryTime: "32 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Spice Garden",
-            cuisine: "Indian, Seafood, Curry",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/ftwzkrqyl4zvbxjpp3qi",
-            rating: "4.2",
-            deliveryTime: "34 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Green Leaf",
-            cuisine: "Pure Veg, Thali, Gujarati",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/dfll6fkkq1g5kmyb2bhk",
-            rating: "4.5",
-            deliveryTime: "35 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Juicy Burgers",
-            cuisine: "Burgers, Wraps, Beverages",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/azt0vgubsh7ekywjwbmm",
-            rating: "4.3",
-            deliveryTime: "28 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Madras Mess",
-            cuisine: "South Indian, Non-Veg, Curry",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/s3tz8ax8nhyqf3nkljmn",
-            rating: "4.4",
-            deliveryTime: "37 Minutes"
-        }
-    },
-    {
-        type: "restaurant",
-        data: {
-            resname: "Urban Cafe",
-            cuisine: "Cafe, Continental, Breakfast",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/tvnvkzzv8n0vxv7yzcjb",
-            rating: "4.2",
-            deliveryTime: "30 Minutes"
-        }
     }
 ];
 exports.default = resObj;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"3PJ6N":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fSZbx":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$9ecf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$9ecf.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9ecf.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "shimmer-container",
+        children: Array(12).fill(0).map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-line"
+                    }, void 0, false, {
+                        fileName: "src/components/Shimmer.js",
+                        lineNumber: 6,
+                        columnNumber: 21
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "shimmer-line"
+                    }, void 0, false, {
+                        fileName: "src/components/Shimmer.js",
+                        lineNumber: 7,
+                        columnNumber: 21
+                    }, undefined)
+                ]
+            }, index, true, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 5,
+                columnNumber: 17
+            }, undefined))
+    }, void 0, false, {
+        fileName: "src/components/Shimmer.js",
+        lineNumber: 3,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$9ecf.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"3PJ6N":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$d118 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$d118.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -20303,7 +20269,16 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constant = require("../utils/constant");
+var _react = require("react");
+var _s = $RefreshSig$();
 const Header = ()=>{
+    _s();
+    const [state, setState] = (0, _react.useState)("Login");
+    function handClick() {
+        if (state == "Login") setState("Logout");
+        else setState("Login");
+    }
+    const btnname = "Login";
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
@@ -20315,12 +20290,12 @@ const Header = ()=>{
                     alt: "App Logo"
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 8,
+                    lineNumber: 16,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 7,
+                lineNumber: 15,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -20331,48 +20306,61 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 17,
+                            lineNumber: 25,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About Us"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 18,
+                            lineNumber: 26,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contact Us"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 19,
+                            lineNumber: 27,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 20,
+                            lineNumber: 28,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "login-btn",
+                            onClick: handClick,
+                            children: [
+                                state,
+                                " "
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 29,
                             columnNumber: 13
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 16,
+                    lineNumber: 24,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 15,
+                lineNumber: 23,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 6,
+        lineNumber: 14,
         columnNumber: 7
     }, undefined);
 };
+_s(Header, "2h0xQR1yY0qSMhBwhqoMrs1fGqc=");
 _c = Header;
 exports.default = Header;
 var _c;
@@ -20383,7 +20371,7 @@ $RefreshReg$(_c, "Header");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../utils/constant":"2QBK6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2QBK6":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","../utils/constant":"2QBK6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U"}],"2QBK6":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);

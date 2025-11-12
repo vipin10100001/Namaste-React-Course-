@@ -5,7 +5,7 @@ const resObj = [
         resname: "Meghna Food",
         cuisine: "Biriyani, North Indian, Asian",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/mbckv4x49jngl7czzxhl",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bangladeshi_Biryani.jpg/250px-Bangladeshi_Biryani.jpg",
         rating: "4.3",
         deliveryTime: "30 Minutes",
       },
@@ -16,7 +16,7 @@ const resObj = [
         resname: "Hotel Taj",
         cuisine: "Chicken Biriyani, North Indian, Asian",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/ek2yapj6wkr3nbd9xyba",
+          "https://media.easemytrip.com/media/Blog/India/637006193676361092/637006193676361092aFt5NW.jpg",
         rating: "4.1",
         deliveryTime: "32 Minutes",
       },
@@ -27,7 +27,7 @@ const resObj = [
         resname: "Domino’s Pizza",
         cuisine: "Pizza, Italian, Fast Food",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/okgglzaixx8vkh1fxth3",
+          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/0d/14/43/muy-buena.jpg?w=900&h=500&s=1",
         rating: "4.5",
         deliveryTime: "28 Minutes",
       },
@@ -49,7 +49,7 @@ const resObj = [
         resname: "China Town",
         cuisine: "Chinese, Asian, Noodles, Dumplings",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/wbqmu2r1dxdvxxsug8tq",
+          "https://content.jdmagicbox.com/v2/comp/mumbai/c5/022p1228899921b1x5c5/catalogue/china-village-restaurant-goregaon-east-mumbai-thai-restaurants-0kmuxsqjlo.jpg",
         rating: "4.0",
         deliveryTime: "33 Minutes",
       },
@@ -60,7 +60,7 @@ const resObj = [
         resname: "Barbeque Nation",
         cuisine: "Grill, Buffet, North Indian",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/xvrrlqkooh3ds5awqh1p",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0VRd5W3bsjn4nnuVS8RIfucTjyvulxsBaTQ&s",
         rating: "4.4",
         deliveryTime: "36 Minutes",
       },
@@ -71,7 +71,7 @@ const resObj = [
         resname: "Subway",
         cuisine: "Healthy, Sandwich, Fast Food",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/cfcyhxttgtrmyr7t6ubv",
+          "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/veg-grilled-sandwich-recipe.jpg",
         rating: "4.1",
         deliveryTime: "25 Minutes",
       },
@@ -82,7 +82,7 @@ const resObj = [
         resname: "The Pasta Bowl Company",
         cuisine: "Italian, Continental, Salads",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/lsncoqhwrrf5wsn5t3tr",
+          "https://www.spicebangla.com/wp-content/uploads/2024/08/Spicy-Pasta-recipe-optimised-scaled.webp",
         rating: "4.6",
         deliveryTime: "29 Minutes",
       },
@@ -93,7 +93,7 @@ const resObj = [
         resname: "Burger King",
         cuisine: "Burgers, Fries, Beverages",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/eqj7s8hxftfheqjztq9m",
+          "https://assets.bonappetit.com/photos/5b919cb83d923e31d08fed17/4:3/w_2666,h_2000,c_limit/basically-burger-1.jpg",
         rating: "4.3",
         deliveryTime: "31 Minutes",
       },
@@ -104,7 +104,7 @@ const resObj = [
         resname: "Sagar Ratna",
         cuisine: "South Indian, Vegetarian, Dosa",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/vxglhzvfnprsgf7ssbya",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7P9-ECimzMDQMWGiu2XnSWErvEqRmz5rTaw&s",
         rating: "4.2",
         deliveryTime: "33 Minutes",
       },
@@ -115,7 +115,7 @@ const resObj = [
         resname: "Royal Bakers",
         cuisine: "Bakery, Snacks, Desserts",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/qldpfw5uhlhkb5sg2qgk",
+          "https://bizimages.withfloats.com/actual/8a9475a8d9aa4cb0ad217afe3ee38bee.jpg",
         rating: "4.5",
         deliveryTime: "26 Minutes",
       },
@@ -126,7 +126,7 @@ const resObj = [
         resname: "Café Coffee Day",
         cuisine: "Cafe, Beverages, Desserts",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/yvjqgbckd3iwhkg2nwyu",
+          "https://content.jdmagicbox.com/comp/def_content/coffee_shops/default-coffee-shops-7.jpg",
         rating: "4.1",
         deliveryTime: "34 Minutes",
       },
@@ -137,7 +137,7 @@ const resObj = [
         resname: "Thalassery Kitchen",
         cuisine: "Kerala, Malabar, Biriyani",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/vibehy2a3ofjqgzvcmkr",
+          "https://farm5.staticflickr.com/4206/34630446624_ec6133ed16_o_d.jpg",
         rating: "4.4",
         deliveryTime: "35 Minutes",
       },
@@ -148,7 +148,7 @@ const resObj = [
         resname: "Punjabi Dhaba",
         cuisine: "North Indian, Tandoor, Roti",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/mwhlg9ex4qdbgsfjzy8g",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTkYFnrVYkLErtIaxF4-N0mDW-Ldguh5LlTg&s",
         rating: "4.3",
         deliveryTime: "30 Minutes",
       },
@@ -159,7 +159,7 @@ const resObj = [
         resname: "Pind Balluchi",
         cuisine: "Punjabi, Mughlai, Grill",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/tcfmvhq0mwrrn0rpq2l1",
+          "https://static.toiimg.com/thumb/msid-61846577,width-1280,height-720,resizemode-4/61846577.jpg",
         rating: "4.5",
         deliveryTime: "28 Minutes",
       },
@@ -181,7 +181,7 @@ const resObj = [
         resname: "Arabian Dreams",
         cuisine: "Shawarma, Arabian, Grilled Meat",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/kcclu8bkm4aue3a6z4f4",
+          "https://www.tasteofhome.com/wp-content/uploads/2024/05/Cacio-e-Pepe_EXPS_TOHcom23_273412_P2_MD_04_26_5b.jpg",
         rating: "4.2",
         deliveryTime: "27 Minutes",
       },
@@ -192,7 +192,7 @@ const resObj = [
         resname: "Veggie Delight",
         cuisine: "Vegan, Healthy, Salads",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/vpqtqoybjyyts3jcb4tt",
+          "https://www.tasteofhome.com/wp-content/uploads/2025/02/Favorite-Mediterranean-Salad_EXPS_TOHcom25_41556_MD_P2_02_05_1b.jpg",
         rating: "4.3",
         deliveryTime: "30 Minutes",
       },
@@ -275,171 +275,9 @@ const resObj = [
         deliveryTime: "35 Minutes",
       },
     },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Mainland China",
-        cuisine: "Chinese, Thai, Asian",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/x6mff0jlfirvdxlwbnxk",
-        rating: "4.5",
-        deliveryTime: "37 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Thomson Grill",
-        cuisine: "Grill, Barbecue, Continental",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/izubjvbxgsefnfv7qymd",
-        rating: "4.2",
-        deliveryTime: "30 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Chai Point",
-        cuisine: "Beverages, Snacks, Tea",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/mczp7hnjgbbmvbw9oyxb",
-        rating: "4.3",
-        deliveryTime: "27 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "A2B Adyar Ananda Bhavan",
-        cuisine: "South Indian, Pure Veg, Sweets",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/vxhyqvyq1v6dpwcmc5pv",
-        rating: "4.5",
-        deliveryTime: "28 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Frozen Treats",
-        cuisine: "Ice Cream, Desserts",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/nmhm8w3dmnshdcin1zrl",
-        rating: "4.4",
-        deliveryTime: "25 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Gokul Oottupura",
-        cuisine: "Kerala, Vegetarian Meals",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/rgzk2csah7nrhvfltjyu",
-        rating: "4.3",
-        deliveryTime: "31 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Juice World",
-        cuisine: "Juices, Shakes, Beverages",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/lrbq4tvpqbrscxk6bvcu",
-        rating: "4.2",
-        deliveryTime: "26 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Tandoor Flames",
-        cuisine: "North Indian, Grill, Mughlai",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/dyrfj2cjquzhxlnpceyy",
-        rating: "4.4",
-        deliveryTime: "33 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Bake My Day",
-        cuisine: "Bakery, Pastry, Snacks",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/n2t1jvv8xlp1gve6dtbz",
-        rating: "4.6",
-        deliveryTime: "29 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Hakka House",
-        cuisine: "Chinese, Stir Fry, Noodles",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/w6gxpxjqxmtm4kgk2e1y",
-        rating: "4.3",
-        deliveryTime: "32 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Spice Garden",
-        cuisine: "Indian, Seafood, Curry",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/ftwzkrqyl4zvbxjpp3qi",
-        rating: "4.2",
-        deliveryTime: "34 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Green Leaf",
-        cuisine: "Pure Veg, Thali, Gujarati",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/dfll6fkkq1g5kmyb2bhk",
-        rating: "4.5",
-        deliveryTime: "35 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Juicy Burgers",
-        cuisine: "Burgers, Wraps, Beverages",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/azt0vgubsh7ekywjwbmm",
-        rating: "4.3",
-        deliveryTime: "28 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Madras Mess",
-        cuisine: "South Indian, Non-Veg, Curry",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/s3tz8ax8nhyqf3nkljmn",
-        rating: "4.4",
-        deliveryTime: "37 Minutes",
-      },
-    },
-    {
-      type: "restaurant",
-      data: {
-        resname: "Urban Cafe",
-        cuisine: "Cafe, Continental, Breakfast",
-        photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/tvnvkzzv8n0vxv7yzcjb",
-        rating: "4.2",
-        deliveryTime: "30 Minutes",
-      },
-    },
+    
+   
+   
   ];
   
   export default resObj;
