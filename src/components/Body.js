@@ -6,14 +6,15 @@ import Shimmer from "./Shimmer";
 function Body() {
   const [restaurants, setRestaurants] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchtext,setSearchtext]=useState(" ");
 
   useEffect(() => {
-    // Simulate API fetch using mock data
+   
     const fetchMockData = () => {
       setTimeout(() => {
         setRestaurants(resObj); 
         setLoading(false);
-      }, 1000); // just for loading effect
+      }, 1000); 
     };
 
     
@@ -44,19 +45,26 @@ function Body() {
       <h2 className="title">🍽 Restaurants in Bangalore</h2>
 
       <div className="search">
-      <input type="text"  />
-      <button>Search</button>
-      
-      </div>
-
-      <div className="filter">
-        <button className="filter-btn" onClick={filterTopRated}>
-          ⭐ Top Rated (4.3+)
-        </button>
-        <button className="filter-btn" onClick={resetFilter}>
-          🔄 Reset
-        </button>
-      </div>
+      <input
+        type="text"
+        className="search-box"
+        value={searchtext}
+        onChange={(e) => setSearchtext(e.target.value)}
+      />
+    
+      <button
+        className="srch-btn"
+        onClick={() => {
+          const filtered = resObj.filter((r) =>
+            r.data.name.toLowerCase().includes(searchtext.toLowerCase())
+          );
+          setRestaurants(filtered);
+        }}
+      >
+        Search
+      </button>
+    </div>
+    
 
       <div className="res-container">
         {restaurants.map((restaurant, index) => (

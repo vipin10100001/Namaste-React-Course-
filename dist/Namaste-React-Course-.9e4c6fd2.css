@@ -141,7 +141,7 @@ body {
 }
 
 .filter {
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   gap: 10px;
   padding: 20px;
@@ -237,5 +237,13 @@ body {
 
 .login-btn:hover {
   opacity: .3;
+}
+
+.input-bar {
+  display: flex;
+}
+
+.srch-btn {
+  display: block;
 }
 /*# sourceMappingURL=Namaste-React-Course-.9e4c6fd2.css.map */
