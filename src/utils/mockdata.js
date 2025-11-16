@@ -226,7 +226,7 @@ const resObj = [
         resname: "Paradise Biryani",
         cuisine: "Hyderabadi, North Indian, Kebab",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/uxrxpgqulquklop3tpdl",
+          "https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg",
         rating: "4.5",
         deliveryTime: "31 Minutes",
       },
@@ -237,7 +237,7 @@ const resObj = [
         resname: "Momo Magic Cafe",
         cuisine: "Chinese, Tibetan, Fast Food",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/bh7kw5yixrkvopxozmyx",
+          "https://images.deliveryhero.io/image/fd-pk/LH/m930-hero.jpg",
         rating: "4.2",
         deliveryTime: "25 Minutes",
       },
@@ -248,7 +248,7 @@ const resObj = [
         resname: "Pizza Hut",
         cuisine: "Pizza, Italian, Fast Food",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/qzq7fjl8yy5bhi8pnnkl",
+          "https://www.foodandwine.com/thmb/iJw7N_NfcPpd-EB8rpYbzrkSFIM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tomato-mozzarella-pizza-FT-RECIPE0725-e7244e979c504188a049623668c15b2e.jpg",
         rating: "4.3",
         deliveryTime: "29 Minutes",
       },
@@ -259,7 +259,7 @@ const resObj = [
         resname: "Chicking",
         cuisine: "Fried Chicken, Wraps, Beverages",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/qc4luhjst1tm4gmgoy2m",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqNY-42VcAOTJTWaem2rirev19rQXNwAb54A&s",
         rating: "4.1",
         deliveryTime: "26 Minutes",
       },
@@ -270,7 +270,7 @@ const resObj = [
         resname: "Aroma of South",
         cuisine: "Kerala, Dosa, Veg Meals",
         photo:
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/m6cbmwb7y7hy7c4nb3xa",
+          "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/06/masala-dosa-recipe.jpg",
         rating: "4.4",
         deliveryTime: "35 Minutes",
       },

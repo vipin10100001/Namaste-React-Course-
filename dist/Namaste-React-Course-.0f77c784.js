@@ -19875,7 +19875,7 @@ function Body() {
     _s();
     const [restaurants, setRestaurants] = (0, _react.useState)([]);
     const [loading, setLoading] = (0, _react.useState)(true);
-    const [searchtext, setSearchtext] = (0, _react.useState)(" ");
+    const [searchtext, setSearchtext] = (0, _react.useState)("");
     (0, _react.useEffect)(()=>{
         const fetchMockData = ()=>{
             setTimeout(()=>{
@@ -19894,7 +19894,7 @@ function Body() {
     };
     if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 38,
+        lineNumber: 41,
         columnNumber: 12
     }, this);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -19905,7 +19905,7 @@ function Body() {
                 children: "\uD83C\uDF7D Restaurants in Bangalore"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 45,
+                lineNumber: 48,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -19918,25 +19918,25 @@ function Body() {
                         onChange: (e)=>setSearchtext(e.target.value)
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 48,
+                        lineNumber: 51,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "srch-btn",
                         onClick: ()=>{
-                            const filtered = (0, _mockdataDefault.default).filter((r)=>r.data.name.toLowerCase().includes(searchtext.toLowerCase()));
+                            const filtered = (0, _mockdataDefault.default).filter((r)=>r.data.resname.toLowerCase().includes(searchtext.toLowerCase()));
                             setRestaurants(filtered);
                         },
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 55,
+                        lineNumber: 61,
                         columnNumber: 7
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 47,
+                lineNumber: 50,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -19945,22 +19945,22 @@ function Body() {
                         ...restaurant.data
                     }, index, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 71,
+                        lineNumber: 77,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 69,
+                lineNumber: 75,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 44,
+        lineNumber: 47,
         columnNumber: 5
     }, this);
 }
-_s(Body, "p2UEvbY8h3RQLIfuBc28BpzmdaM=");
+_s(Body, "InCEf5Mxp4EltcVPdWmEDB0qexc=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -20257,7 +20257,7 @@ const resObj = [
         data: {
             resname: "Paradise Biryani",
             cuisine: "Hyderabadi, North Indian, Kebab",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/uxrxpgqulquklop3tpdl",
+            photo: "https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg",
             rating: "4.5",
             deliveryTime: "31 Minutes"
         }
@@ -20267,7 +20267,7 @@ const resObj = [
         data: {
             resname: "Momo Magic Cafe",
             cuisine: "Chinese, Tibetan, Fast Food",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/bh7kw5yixrkvopxozmyx",
+            photo: "https://images.deliveryhero.io/image/fd-pk/LH/m930-hero.jpg",
             rating: "4.2",
             deliveryTime: "25 Minutes"
         }
@@ -20277,7 +20277,7 @@ const resObj = [
         data: {
             resname: "Pizza Hut",
             cuisine: "Pizza, Italian, Fast Food",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/qzq7fjl8yy5bhi8pnnkl",
+            photo: "https://www.foodandwine.com/thmb/iJw7N_NfcPpd-EB8rpYbzrkSFIM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tomato-mozzarella-pizza-FT-RECIPE0725-e7244e979c504188a049623668c15b2e.jpg",
             rating: "4.3",
             deliveryTime: "29 Minutes"
         }
@@ -20287,7 +20287,7 @@ const resObj = [
         data: {
             resname: "Chicking",
             cuisine: "Fried Chicken, Wraps, Beverages",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/qc4luhjst1tm4gmgoy2m",
+            photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqNY-42VcAOTJTWaem2rirev19rQXNwAb54A&s",
             rating: "4.1",
             deliveryTime: "26 Minutes"
         }
@@ -20297,7 +20297,7 @@ const resObj = [
         data: {
             resname: "Aroma of South",
             cuisine: "Kerala, Dosa, Veg Meals",
-            photo: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/m6cbmwb7y7hy7c4nb3xa",
+            photo: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/06/masala-dosa-recipe.jpg",
             rating: "4.4",
             deliveryTime: "35 Minutes"
         }
