@@ -1,14 +1,33 @@
-const RestaurantCard = (props) => {
-    const { resname, cuisine, photo, rating } = props;
-    return (
-      <div className="res-card">
-        <h3>{resname}</h3>
-        <img className="res-logo" src={photo} alt={resname} />
-        <h3 style={{ backgroundColor: "red" }}>{cuisine}</h3>
-        <h4>{rating} ⭐</h4>
-        <p>30 Minutes</p>
-      </div>
-    );
-  };
+import React from "react";
 
-  export default RestaurantCard;
+const RestaurantCard = ({ resData }) => {
+  const {
+    name,
+    cuisines,
+    cloudinaryImageId,
+    avgRating,
+    sla,
+    costForTwo
+  } = resData;
+
+  return (
+    <div className="res-card">
+      <img
+        className="res-logo"
+        src={
+          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300/" +
+          cloudinaryImageId
+        }
+        alt={name}
+      />
+
+      <h3>{name}</h3>
+      <p>{cuisines?.join(", ")}</p>
+      <p>⭐ {avgRating}</p>
+      <p>{sla?.deliveryTime} Minutes</p>
+      <p>{costForTwo}</p>
+    </div>
+  );
+};
+
+export default RestaurantCard;
