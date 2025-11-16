@@ -26,7 +26,7 @@ function handClick(){
             <li>About Us</li>
             <li>Contact Us</li>
             <li>Cart</li>
-            <button className="login-btn" onClick={ handClick}>{state} </button>
+            <button className="login-btn" onClick={handClick}>{state} </button>
           </ul>
         </div>
       </div>
