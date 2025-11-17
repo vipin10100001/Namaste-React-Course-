@@ -1,8 +1,19 @@
 import { LOGO_URL } from "../utils/constant";
-import { use, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+
+//console.log("Header component");
+
+
+
   const [state,setState]=useState("Login");
+
+  useEffect(()=>{
+    console.log("useEffect is called");
+  },[state]);
+
+
 function handClick(){
   if(state=="Login"){
     setState("Logout");
