@@ -9,28 +9,25 @@ function Body() {
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    // Fetch Swiggy API
-    async function fetchData() {
+    const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&page_type=DESKTOP_WEB_LISTING"
+          "https://namastedev.com/api/v1/listRestaurants"
         );
         const json = await response.json();
 
-        // Extract restaurants from Swiggy's nested JSON
         const list =
-          json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-            ?.restaurants || [];
+          json?.data?.data?.cards?.[1]?.card?.card?.gridElements
+            ?.infoWithStyle?.restaurants || [];
 
         setRestaurants(list);
         setFilteredRestaurants(list);
       } catch (error) {
-        console.error("Error fetching Swiggy API:", error);
+        console.error("Error fetching Restaurant List:", error);
       } finally {
         setLoading(false);
       }
-    }
-
+    };
     fetchData();
   }, []);
 
@@ -63,7 +60,10 @@ function Body() {
       <div className="res-container">
         {filteredRestaurants.length > 0 ? (
           filteredRestaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant.info.id} resData={restaurant.info} />
+            <RestaurantCard
+              key={restaurant.info.id}
+              resData={restaurant}
+            />
           ))
         ) : (
           <h3>No restaurants found</h3>
