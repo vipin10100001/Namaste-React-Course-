@@ -4,6 +4,9 @@ class UserClass extends React.Component{
      render(){
         return (
             <div >
+            <h2>Name</h2>
+    <h3>Location</h3>
+    <h4>Contact : </h4>
             </div>
         )
      }
