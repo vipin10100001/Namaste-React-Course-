@@ -27487,6 +27487,11 @@ const About = ()=>{
                 fileName: "src/components/About.js",
                 lineNumber: 8,
                 columnNumber: 1
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {}, void 0, false, {
+                fileName: "src/components/About.js",
+                lineNumber: 9,
+                columnNumber: 1
             }, undefined)
         ]
     }, void 0, true, {

@@ -6,6 +6,7 @@ const About = () => {
     <div>
     <User />
 <UserClass />
+<UserClass />
 </div>
 
 
